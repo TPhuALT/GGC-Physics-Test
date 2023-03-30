@@ -4,6 +4,8 @@
         (localhost/phpMyAdmin to access MySQL, username = "root", password = "")
 -->
 
+<!--Test comment-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
