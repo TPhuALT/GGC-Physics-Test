@@ -18,7 +18,8 @@
     
         $is_valid = mysqli_fetch_array(mysqli_query($connect, $check_stmt));
 
-        $_POST['logged_in'] = $is_valid;
+        session_start();
+        $_SESSION['loggedIn'] = isset($is_valid);
 
         if (isset($is_valid) && $is_valid) {
             echo '<script type="text/JavaScript">
