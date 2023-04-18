@@ -4,13 +4,13 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
+<?php
+    $isLogged = isset($_SESSION['loggedIn']);
+?>
+
 <script>
-    var logged_in = Request.QueryString("name");
-    if (logged_in == true)
-    var check = <?php
-                    if (isset($_SESSION['loggedIn'])) echo $_SESSION['loggedIn']; 
-                ?>;
-    if (check != null) {
+    var check = $isLogged;
+    if (true) {
         document.getElementById("header").innerHTML = "Đăng nhập thành công. Đây là trang chủ.";
     } else {
         document.getElementById("header").innerHTML = "Đăng nhập không thành công";
